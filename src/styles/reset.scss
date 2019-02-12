@@ -1,0 +1,181 @@
+.__vuescroll .__view {
+  max-width: 100%;
+}
+
+.el-dropdown {
+  color: inherit;
+}
+.el-carousel__container {
+  height: 100%;
+}
+
+.carousel-box .el-carousel__item {
+  display: none;
+  &.is-active {
+    z-index: 0;
+    display: block;
+  }
+}
+
+// 表格默认
+.table-header {
+  margin: 10px 0;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: flex-end;
+  line-height: 32px;
+  &-left {
+    & > * + *{
+      max-width: 220px;
+      margin-left: 10px;
+    }
+  }
+  &-right {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    & > * + *{
+      max-width: 220px;
+      margin-left: 10px;
+    }
+  }
+}
+
+.el-table__header th.is-leaf {
+  border-top: 1px solid #e6ebf5;
+  border-bottom: 1px solid #e6ebf5;
+  background-color: #f8f8f9;
+  &+th.is-leaf {
+    border-left: none;
+  }
+}
+
+// 列表筛选
+.tbl-filter {
+  .el-table__column-filter-trigger {
+    margin-left: 3px;
+    line-height: 22px;
+    i {
+      vertical-align: top;
+      font-size: 14px;
+      line-height: 23px;
+    }
+  }
+}
+
+.table-footer {
+  position: relative;
+  margin-top: 8px;
+  height: 32px;
+  text-align: center;
+  .pagination {
+    margin: 0 100px;
+  }
+  &-left, &-right {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    display: flex;
+    align-items: center;
+  }
+  .table-footer-left {
+    left: 0;
+  }
+  .table-footer-right {
+    right: 0;
+  }
+}
+
+.save-progress {
+  .el-progress-bar__outer, .el-progress-bar__inner {
+    border-radius: 0;
+  }
+}
+
+.new-templete-dialog {
+  .el-dialog {
+    border-radius: 15px;
+    .el-dialog__header {
+      padding: 0;
+    }
+    .el-dialog__body {
+      padding: 0 40px;
+      .cus-tabs {
+        padding-top: 20px;
+        .el-tabs__header {
+          text-align: center;
+          .el-tabs__nav-wrap {
+            display: inline-block;
+          }
+        }
+        .el-tabs__nav-wrap::after {
+          background-color: #ffffff;
+        }
+      }
+    }
+  }
+}
+.preview-dialog {
+  position: fixed;
+  top: 15%;
+  left: 15%;
+  right: 15%;
+  bottom: 15%;
+  margin: 0;
+  display: -webkit-flex;
+  display: felx;
+  flex-direction: column;
+  // background: rgba(0, 0, 0, 0.4);
+  background-image: url('../assets/render_bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  .dialog-title {
+    i {
+      float: right;
+      cursor: pointer;
+      font-size: 32px;
+      color: #ffffff;
+      background-color: #909399;
+      border-radius: 50%;
+    }
+  }
+  .el-dialog__body {
+    flex: 1;
+    padding-top: 0;
+    padding-bottom: 0;
+    min-width: 0;
+    min-height: 0;
+  }
+}
+// .preview-scale .el-slider__bar {
+//   background-color: #73C9C9;
+// }
+// 自定义分屏
+.defined-pane-dialog {
+  border-radius: 5px;
+  border: 1px solid #97baf2;
+  -webkit-box-shadow: 0 0px 1px #97baf2;
+  box-shadow: 0 0px 1px #97baf2;
+  overflow: hidden;
+  .el-dialog__header, .el-dialog__body {
+    padding: 0;
+  }
+}
+
+// 属性 折叠面板
+.el-collapse.property-collapse {
+  border: none;
+  .el-collapse-item__header {
+    height: 38px;
+    line-height: 38px;
+    color: #0b7ff7;
+    border-bottom: none;
+  }
+  .el-collapse-item__wrap {
+    border-bottom: none;
+  }
+  .el-collapse-item__content {
+    padding-bottom: 0;
+  }
+}
